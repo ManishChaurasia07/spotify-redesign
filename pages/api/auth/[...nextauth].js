@@ -34,7 +34,8 @@ async function refreshAccessToken(token) {
       ...token,
       accessToken: refreshedTokens.access_token,
       accessTokenExpires: Date.now() + refreshedTokens.expires_in * 1000,
-      refreshToken: refreshedTokens.refresh_token ?? token.refreshToken, // Fall back to old refresh token
+      refreshToken: refreshedTokens.refresh_token ?? token.refreshToken,
+       // Fall back to old refresh token
     };
   } catch (error) {
     console.log(error);
@@ -53,10 +54,10 @@ export default NextAuth ({
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
       authorization:
         "https://accounts.spotify.com/authorize?scope=user-read-email,playlist-read-private,user-read-email,streaming,user-read-private,user-library-read,user-library-modify,user-read-playback-state,user-modify-playback-state,user-read-recently-played,user-follow-read",
-    })
+    }),
     // add more providers here
   ],
-  pages: {
+pages: {
      signIn: "/auth/signin",
   },
 

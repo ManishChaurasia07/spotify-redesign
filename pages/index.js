@@ -15,12 +15,9 @@ export default function Home() {
 
   // Loading animation...
   if (status === "loading") {
-    return <Loader />;
+    return <Loader/>;
   }
-
-
-
-  return (
+    return (
     <div className="">
       <Head>
         <title>Spotify - Dashboard</title>
