@@ -1,12 +1,12 @@
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}"],
-    darkMode: false, // or 'media' or 'class'
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       screens: {
-        "2xl" : "1500px",
+        "2xl": "1500px",
       },
       keyframes: {
         pulse: {
@@ -19,13 +19,13 @@ module.exports = {
         },
       },
       animation: {
-        pulse: "pulse 4s cubic-beizer(0.4, 0, 0.6, 1) infinite",
+        pulse: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
-  },
+    },
     fontFamily: {
       body: ["Andada Pro", "serif"],
-      sans: ["ul-sans-serif", "system-ui"],
-    }
+      sans: ["ui-sans-serif", "system-ui"],
+    },
   },
   variants: {
     extend: {},
