@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import RecentlyPlayed from "./RecentlyPlayed";
 
 function Right({ chooseTrack, spotifyApi }) {
-  const { data: session } = useSession();
+  const { data: session } =  useSession();
   const accessToken = session?.accessToken;
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
@@ -55,11 +55,7 @@ function Right({ chooseTrack, spotifyApi }) {
 
         <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide">
           {recentlyPlayed.map((track, index) => (
-            <RecentlyPlayed
-              key={index}
-              track={track}
-              chooseTrack={chooseTrack}
-            />
+            <RecentlyPlayed key={index} track={track} chooseTrack={chooseTrack} />
           ))}
         </div>
         <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">

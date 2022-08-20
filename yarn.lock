@@ -207,6 +207,11 @@
   "resolved" "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   "version" "2.2.0"
 
+"bootstrap@^5.2.0":
+  "integrity" "sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A=="
+  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.2.0.tgz"
+  "version" "5.2.0"
+
 "bowser@^1.7.3":
   "integrity" "sha512-9IdMmj2KjigRq6oWhmwv1W36pDuA4STQZ8q6YO9um+x07xgYNCD3Oou+WP/3L1HNz7iqythGet3/p4wvc8AAwQ=="
   "resolved" "https://registry.npmjs.org/bowser/-/bowser-1.9.4.tgz"

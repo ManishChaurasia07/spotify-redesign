@@ -27,22 +27,22 @@ function Dashboard() {
     setPlayingTrack(track);
   };
 
-  useEffect(() => {
+  {/* useEffect(() => {
     if (!accessToken) return;
     spotifyApi.setAccessToken(accessToken);
-  }, [accessToken]);
+  }, [accessToken]); */}
 
   return (
     <main className="flex min-h-screen min-w-max bg-black lg:pb-24">
       <Sidebar />
-      <Body chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
-      <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
+      <Body spotifyApi={spotifyApi} chooseTrack={chooseTrack} />
+      <Right spotifyApi={spotifyApi} chooseTrack={chooseTrack}/>
 
-      {showPlayer && (
+    {showPlayer && (
         <div className="fixed bottom-0 left-0 right-0 z-50">
           <Player accessToken={accessToken} trackUri={playingTrack.uri} />
         </div>
-      )}
+    )} 
     </main>
   );
 }
